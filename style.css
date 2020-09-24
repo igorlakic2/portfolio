@@ -54,7 +54,44 @@ section{
     font-size: 15px;
 }
 .education{
-    width: 70%;
+    height: 700px;
+}
+.container{
+    width: 80%;
     text-align: center;
     margin: auto;
+}
+.skills{
+    background-color: #e8ece8;
+    height: 550px;
+}
+.skillsDiv{
+    display: flex;
+    flex-direction: row;
+    padding: 100px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.skill{
+    padding: 0 30px;
+    margin-top: 50px;
+    opacity: 0;
+    transition: 0.8s all;
+}
+.skill i{
+    font-size: 130px;
+    color: #0b56a4;
+}
+.skill p{
+    padding: 20px 0;
+    font-weight: bold;
+}
+.skill:hover{
+    color: #ffae00;
+}
+.skill:hover i{
+    color: #ffae00;
+}
+.projects{
+    height: 500px;
 }

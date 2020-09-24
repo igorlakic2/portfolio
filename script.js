@@ -11,7 +11,13 @@ const typing = () => {
 
 const animations = () => {
     document.querySelector(".description").style.opacity = 1;
-    document.querySelector(".description").style.marginTop = '0';
+    document.querySelector(".description").style.marginTop = 0;
+}
+
+const skillsAnimation = (skill) => {
+    let s = document.querySelector(`.${skill}`);   
+    s.style.marginTop = 0;
+    s.style.opacity = 1;
 }
 
 window.addEventListener('load', () => {
@@ -20,3 +26,16 @@ window.addEventListener('load', () => {
 
 });
 
+window.addEventListener('scroll', () => {
+    let skillsDivPosition = document.querySelector(".skills").offsetTop;
+    let skillsDivHeight = document.querySelector(".skills").offsetHeight;
+    let scrollPx = window.pageYOffset + window.innerHeight;
+
+    if(scrollPx > skillsDivPosition + (skillsDivHeight / 2)){
+        setTimeout(() => skillsAnimation('html'), 300);
+        setTimeout(() => skillsAnimation('css'), 500);
+        setTimeout(() => skillsAnimation('js'), 800);
+        setTimeout(() => skillsAnimation('rjs'), 1100);
+        setTimeout(() => skillsAnimation('php'), 1400);
+    }
+})
