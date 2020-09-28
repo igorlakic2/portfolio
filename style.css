@@ -85,12 +85,15 @@ section{
 .skill p{
     padding: 20px 0;
     font-weight: bold;
+    user-select: none;
 }
 .skill:hover{
     color: #ffae00;
 }
 .skill:hover i{
     color: #ffae00;
+    font-size: 145px;
+    transition: 0.3s all;
 }
 .projects{
     height: 500px;

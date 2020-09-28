@@ -14,10 +14,9 @@ const animations = () => {
     document.querySelector(".description").style.marginTop = 0;
 }
 
-const skillsAnimation = (skill) => {
-    let s = document.querySelector(`.${skill}`);   
-    s.style.marginTop = 0;
-    s.style.opacity = 1;
+const skillsAnimation = (skill) => {   
+    document.querySelector(`.${skill}`).style.marginTop = 0;
+    document.querySelector(`.${skill}`).style.opacity = 1;
 }
 
 window.addEventListener('load', () => {
@@ -32,7 +31,7 @@ window.addEventListener('scroll', () => {
     let scrollPx = window.pageYOffset + window.innerHeight;
 
     if(scrollPx > skillsDivPosition + (skillsDivHeight / 2)){
-        setTimeout(() => skillsAnimation('html'), 300);
+        setTimeout(() => skillsAnimation('html'), 200);
         setTimeout(() => skillsAnimation('css'), 500);
         setTimeout(() => skillsAnimation('js'), 800);
         setTimeout(() => skillsAnimation('rjs'), 1100);
