@@ -37,4 +37,16 @@ window.addEventListener('scroll', () => {
         setTimeout(() => skillsAnimation('rjs'), 1100);
         setTimeout(() => skillsAnimation('php'), 1400);
     }
-})
+});
+
+let imgs = document.querySelectorAll('.img');
+
+for(let i=0; i<imgs.length; i++){
+    imgs[i].addEventListener('mouseover', () => {
+        document.querySelectorAll('.bg')[i].style.transform = 'translate(0, 0)';
+    })
+    
+    imgs[i].addEventListener('mouseout', () => {
+        document.querySelectorAll('.bg')[i].style.transform = 'translate(0, 200px)';
+    })
+}
