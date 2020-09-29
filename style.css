@@ -10,6 +10,9 @@ header{
     background-size: cover;
     /* border-bottom: 5px solid #ffae00; */
     position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .gradient{
     background: linear-gradient(to right, rgba(28, 181, 224, 0.8), rgba(0, 0, 70, 0.8));
@@ -65,7 +68,7 @@ section{
     background-color: #e8ece8;
     height: 550px;
 }
-.skillsDiv{
+.skillsDiv, .projectsDiv, .contactDiv{
     display: flex;
     flex-direction: row;
     padding: 100px 0;
@@ -96,18 +99,14 @@ section{
     transition: 0.3s all;
 }
 .projects{
-    height: 500px;
-}
-.projectsDiv{
-    display: flex;
-    flex-direction: row;
-    padding: 100px 0;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    /* height: 500px; */
 }
 .project{
-    margin: 15px 30px;
+    margin: 15px;
     border: 2px solid #e8ece8;
+    -webkit-box-shadow: 10px 10px 31px -8px rgba(0,0,0,0.51);
+    -moz-box-shadow: 10px 10px 31px -8px rgba(0,0,0,0.51);
+    box-shadow: 10px 10px 31px -8px rgba(0,0,0,0.51);
 }
 .project img{
     width: 300px;
@@ -126,6 +125,10 @@ section{
     left: 0;    
     transform: translate(0, 200px);
     transition: all 0.5s;
+    color: white;
+}
+.bg h2{
+    padding: 25px 0;
 }
 .projectInfo{
     background-color: #e8ece8;
@@ -142,4 +145,194 @@ section{
     text-align: center;
     padding: 5px 0;
     color: #0b56a4;
+}
+.icon i:hover{
+    color: #ffae00;
+}
+.contact{
+    background-color: #e8ece8;
+}
+.contact .container{
+    width: 100%;
+}
+.contactDiv{
+    flex-direction: column;
+}
+.contactData{
+    display: flex;
+    flex-direction: row;
+    color: #0b56a4;
+    text-align: center;
+}
+.tel, .mail{
+    flex: 50%;
+    font-size: 40px;
+    padding: 0 50px;
+}
+.tel{
+    text-align: right;
+    padding: 0 50px 0 0;
+}
+.mail{
+    text-align: left;
+    padding: 0 0 0 50px;
+}
+.contactData i{
+    padding: 0 10px 0 0;
+}
+.contactDiv hr{
+    width: 60%;
+    text-align: center;
+}
+.formDiv input, textarea{
+    border: none;
+    border-bottom: 1px solid #0b56a4;
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: inherit;
+    outline: none;
+    width: 30%;
+    margin: 10px 0;
+}
+/* .formDiv input:focus, textarea:focus{
+    border: 1px solid #0b56a4;
+    border-radius: 5px;
+} */
+.formDiv button{
+    color: white;
+    background-color: #0b56a4;
+    outline: none;
+    border: none;
+    padding: 13px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 3px 0 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.formDiv button:hover{
+    color: #0b56a4;
+    background-color: white;
+    border: 2px solid #0b56a4;
+}
+@media (max-width: 1260px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1150px){
+    .name {
+        font-size: 70px;
+    }
+    .container{
+        width: 95%;
+    }
+    .project{
+        flex: 40%;
+    }
+    .project img{
+        width: 100%;
+        height: 250px;
+    }
+    .bg{
+        transform: translate(0, 270px);
+    }
+    .skill{
+        padding: 0;
+    }
+    .contactData{
+        flex-direction: column;
+        padding: 0 0 40px 0;
+    }
+    .tel, .mail{
+        padding: 0 0 15px 0;
+        text-align: center;
+    }
+}
+@media (max-width: 950px){
+    .name{
+        font-size: 60px;;
+    }
+    .formDiv input, textarea{
+        width: 50%;
+    }
+}
+@media (max-width: 800px){
+    section{
+        width: 70%;
+    }
+    .projectsDiv{
+        padding: 70px 0;
+    }
+    .project{
+        flex: 40%;
+    }
+    .project img{
+        height: 200px;
+    }    
+    .skills{
+        height: 650px;
+    }
+    .skillsDiv{
+        padding: 70px 0;
+    }
+    .skill{
+        flex: 33%;
+    }
+    .tel, .mail{
+        font-size: 30px;
+    }
+}
+@media (max-width: 650px){
+    .projectsDiv{
+        padding: 70px 0;
+    }
+    .project img{
+        height: 150px;
+    }
+    .skillsDiv{
+        padding: 70px 0;
+    }
+    .formDiv input, textarea{
+        width: 60%;
+        margin: 6px 0;
+        font-size: 17px;
+    }
+    header{
+        height: 500px;
+    }
+    nav ul{
+        text-align: center;
+        padding: 0;
+    }
+    nav ul li{
+        padding: 20px 10px;
+    }
+    nav ul li a{        
+        font-size: 17px;
+    }
+    .name{
+        font-size: 50px;
+    }
+    .description{
+        font-size: 14px;
+    }
+}
+@media (max-width: 500px) {
+    .tel, .mail{
+        font-size: 20px;
+    }
+    .skills{
+        height: 500px;
+    }
+    .ttl{
+        padding: 50px 0 0 0;
+    }
+    .educationDiv, .skillsDiv, .projectsDiv, .contactDiv{
+        padding: 50px 0;
+    }
+    .skill i {
+        font-size: 100px;
+    }
 }

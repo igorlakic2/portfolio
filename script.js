@@ -47,6 +47,6 @@ for(let i=0; i<imgs.length; i++){
     })
     
     imgs[i].addEventListener('mouseout', () => {
-        document.querySelectorAll('.bg')[i].style.transform = 'translate(0, 200px)';
+        document.querySelectorAll('.bg')[i].style.transform = 'translate(0, 300px)';
     })
 }
