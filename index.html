@@ -6,6 +6,11 @@
     <title>Igor Lakić</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js'></script>
 </head>
 <body>
     <header id="home">
@@ -37,7 +42,7 @@
             <p class="ttl">EDUCATION</p>
         </div>
     </div>
-    <div class="skills">
+    <div id="skills">
         <div class="container">
             <p class="ttl">SKILLS</p>
             <div class="skillsDiv">
@@ -62,10 +67,12 @@
                     <p>PHP</p>
                 </div>
             </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
     </div>
 
-    <div class="projects">
+    <div id="projects">
         <div class="container">
             <p class="ttl">PROJECTS</p>
             <div class="projectsDiv">
@@ -163,7 +170,7 @@
             </div>
         </div>        
     </div>
-    <div class="contact">
+    <div id="contact">
         <div class="container">
             <p class="ttl">CONTACT</p>
             <div class="contactDiv">
@@ -191,5 +198,6 @@
     </div>
 
     <script src="script.js"></script>
+    
 </body>
 </html>

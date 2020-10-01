@@ -64,7 +64,7 @@ section{
     text-align: center;
     margin: auto;
 }
-.skills{
+#skills{
     background-color: #e8ece8;
     height: 550px;
 }
@@ -77,29 +77,33 @@ section{
 }
 .skill{
     padding: 0 30px;
-    margin-top: 50px;
-    opacity: 0;
-    transition: 0.8s all;
 }
 .skill i{
-    font-size: 130px;
-    color: #0b56a4;
+    /* font-size: 130px; */
+    /* color: #0b56a4; */
+    font-size: 90px;
+    color: lightslategray;
 }
 .skill p{
     padding: 20px 0;
     font-weight: bold;
     user-select: none;
+    opacity: 1;
 }
-.skill:hover{
+/* .skill:hover{
     color: #ffae00;
 }
 .skill:hover i{
     color: #ffae00;
     font-size: 145px;
     transition: 0.3s all;
-}
-.projects{
-    /* height: 500px; */
+} */
+.prev, .next{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: 23px;
+    user-select: none;
 }
 .project{
     margin: 15px;
@@ -144,15 +148,15 @@ section{
     font-size: 25px;
     text-align: center;
     padding: 5px 0;
-    color: #0b56a4;
+    /* color: #0b56a4; */
 }
 .icon i:hover{
     color: #ffae00;
 }
-.contact{
+#contact{
     background-color: #e8ece8;
 }
-.contact .container{
+#contact .container{
     width: 100%;
 }
 .contactDiv{
@@ -194,10 +198,6 @@ section{
     width: 30%;
     margin: 10px 0;
 }
-/* .formDiv input:focus, textarea:focus{
-    border: 1px solid #0b56a4;
-    border-radius: 5px;
-} */
 .formDiv button{
     color: white;
     background-color: #0b56a4;
@@ -271,7 +271,7 @@ section{
     .project img{
         height: 200px;
     }    
-    .skills{
+    #skills{
         height: 650px;
     }
     .skillsDiv{
@@ -323,7 +323,7 @@ section{
     .tel, .mail{
         font-size: 20px;
     }
-    .skills{
+    #skills{
         height: 500px;
     }
     .ttl{
