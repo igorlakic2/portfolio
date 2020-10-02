@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 header{
     width: 100%;
@@ -49,15 +50,47 @@ section{
     opacity: 0;
     margin-top: 50px;
     transition: all 0.8s;
+    font-size: 20px;
+}
+.description a{
+    text-decoration: underline;
+    color: white;
+}
+.homeIcons{    
+    opacity: 0;
+    margin-top: 50px;
+    transition: all 0.8s;
+}
+.homeIcons *{
+    display: inline-block;
+}
+.homeIcons a{
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+}
+.homeIcons button{
+    color: #0b56a4;
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 3px 0 15px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+.homeIcons button i{
+    padding: 0px 10px 0 0px;
+    font-size: 15px;
 }
 .ttl{
     color: #ffae00;
     padding: 100px 0 0 0;
     font-weight: bold;
     font-size: 15px;
-}
-.education{
-    height: 700px;
 }
 .container{
     width: 80%;
@@ -67,6 +100,12 @@ section{
 #skills{
     background-color: #e8ece8;
     height: 550px;
+    transition: all 0.5s;
+}
+.skillsDiv{
+    margin-top: 160px;
+    opacity: 0;
+    transition: all 0.8s;
 }
 .skillsDiv, .projectsDiv, .contactDiv{
     display: flex;
@@ -81,7 +120,7 @@ section{
 .skill i{
     /* font-size: 130px; */
     /* color: #0b56a4; */
-    font-size: 90px;
+    font-size: 130px;
     color: lightslategray;
 }
 .skill p{
@@ -90,20 +129,16 @@ section{
     user-select: none;
     opacity: 1;
 }
-/* .skill:hover{
-    color: #ffae00;
+.arrow{
+    display: none;
 }
-.skill:hover i{
-    color: #ffae00;
-    font-size: 145px;
-    transition: 0.3s all;
-} */
 .prev, .next{
     cursor: pointer;
     width: 40px;
     height: 40px;
     font-size: 23px;
     user-select: none;
+    padding: 0 10px;
 }
 .project{
     margin: 15px;
@@ -148,7 +183,7 @@ section{
     font-size: 25px;
     text-align: center;
     padding: 5px 0;
-    /* color: #0b56a4; */
+    color: #0b56a4;
 }
 .icon i:hover{
     color: #ffae00;
@@ -209,12 +244,28 @@ section{
     margin: 3px 0 20px 0;
     cursor: pointer;
     border-radius: 5px;
+    border: 2px solid #0b56a4;
 }
 .formDiv button:hover{
     color: #0b56a4;
     background-color: white;
     border: 2px solid #0b56a4;
 }
+footer{
+    background-color: #0b56a4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+footer h5{
+    padding: 20px 0;
+}
+footer .navIcons a{
+    color: white;
+    font-size: 25px;
+    padding: 15px;
+}
+
 @media (max-width: 1260px){
     .container{
         width: 90%;
@@ -278,7 +329,7 @@ section{
         padding: 70px 0;
     }
     .skill{
-        flex: 33%;
+        /* flex: 33%; */
     }
     .tel, .mail{
         font-size: 30px;
@@ -318,13 +369,22 @@ section{
     .description{
         font-size: 14px;
     }
+    .skill i{
+        font-size: 100px;
+    }
+    .proba{
+        opacity: 1;
+    }
+    #skills {
+        height: 450px;
+    }
+    .ttl{
+        padding: 50px 0 0 0;
+    }
 }
-@media (max-width: 500px) {
+@media (max-width: 520px) {
     .tel, .mail{
         font-size: 20px;
-    }
-    #skills{
-        height: 500px;
     }
     .ttl{
         padding: 50px 0 0 0;
@@ -333,6 +393,100 @@ section{
         padding: 50px 0;
     }
     .skill i {
-        font-size: 100px;
+        font-size: 80px;
+    }
+    .arrow{
+        display: inline-block;
+    }
+    #skills{
+        height: 370px;
+    }
+    section {
+        width: 90%;
+    }
+}
+@media (max-width: 430px){
+    .homeIcons button {
+        padding: 8px 10px;
+        font-size: 12px;
+        margin: 3px 0 0px 0;
+    }
+    #skills{
+        height: auto;
+    }
+    .skill{
+        flex: 45%;
+        opacity: 1;
+        color: #0b56a4;
+    }
+    .skill i{
+        color: #0b56a4;
+        opacity: 1;
+        font-size: 70px;
+    }
+    .arrrow{
+        display: none;
+    }
+    .ttl {
+        padding: 30px 0 0 0;
+    }
+    .name {
+        font-size: 35px;
+    }
+    .description {
+        font-size: 13px;
+    }
+    header {
+        height: 420px;
+    }
+    nav ul li {
+        padding: 15px 6px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    .educationDiv, .skillsDiv, .projectsDiv, .contactDiv {
+        padding: 30px 0;
+    }
+    .project {
+        margin: 10px;
+    }
+    .project img {
+        height: 120px;
+    }
+    .bg h2 {
+        padding: 15px 0;
+        font-size: 17px;
+    }
+    .bg p{
+        font-size: 11px;
+    }
+    .projectInfo > div {
+        padding: 0px;
+    }
+    .icon {
+        display: inline-block;
+        margin: 0px 10px;
+    }
+    .icon i {
+        font-size: 19px;
+    }
+    .contactData {
+        padding: 0 0 20px 0;
+    }
+    .tel, .mail {
+        font-size: 15px;
+    }
+    .formDiv input, textarea {
+        margin: 4px 0;
+        font-size: 13px;
+    }
+    .formDiv button {
+        padding: 8px 10px;
+        font-size: 12px;
+        margin: 3px 0 0px 0;
+    }
+    .arrows{
+        display: none;
     }
 }

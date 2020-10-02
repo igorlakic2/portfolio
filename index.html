@@ -6,11 +6,7 @@
     <title>Igor Lakić</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js'></script>
+
 </head>
 <body>
     <header id="home">
@@ -18,34 +14,33 @@
             <nav>
                 <ul>
                     <li><a href="">Home</a></li>
-                    <li><a href="">Education</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <section>
                 <p class="ttl">PORTFOLIO</p>
                 <h1 class="name"></h1>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Natus sequi laudantium architecto tempora, quibusdam, et repellat ad ut cupiditate
-                     quae itaque laborum minus praesentium in, nobis dolore a sit quidem.
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Natus sequi laudantium architecto tempora, quibusdam, et repellat ad ut cupiditate
-                     quae itaque laborum minus praesentium in, nobis dolore a sit quidem.
+                <p class="description">I am an engineer of electrical and computer engineering and I am
+                    currently looking for an internship that will allow me to progress
+                    further and gain experience. I am ready to learn to raise my
+                    knowledge to a higher level. 
+                    You can find my projects on my <a href="https://github.com/igorlakic2" target="_blank">Github repository</a>.                    
                 </p>
+                <div class="homeIcons">
+                    <div class="cv"><a href="cv/igorlakic.pdf" target="_blank"><button><i class="fas fa-download"></i> My CV</button></a></div>
+                    <div class="contactMe"><a href="#contact"><button><i class="fas fa-id-card"></i> Contact me</button></a></div><br>
+                    <div class="github"><a href="https://github.com/igorlakic2" target="_blank"><i class="fab fa-github"></i></a></div>
+                    <div class="lnkd"><a href="https://www.linkedin.com/in/igorlakic2/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+                </div>
             </section>
         </div>
     </header>
-    <div class="education">        
-        <div class="container">
-            <p class="ttl">EDUCATION</p>
-        </div>
-    </div>
     <div id="skills">
         <div class="container">
             <p class="ttl">SKILLS</p>
-            <div class="skillsDiv">
+            <div id="myslider" class="skillsDiv">
                 <div class="skill html">
                     <i class="fab fa-html5"></i>
                     <p>HTML5</p>
@@ -67,8 +62,10 @@
                     <p>PHP</p>
                 </div>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="arrows">
+                <a class="prev arrow" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next arrow" onclick="plusSlides(1)">&#10095;</a>
+            </div>
         </div>
     </div>
 
@@ -87,7 +84,7 @@
                     <div class="projectInfo">
                         <div>
                             <a href="https://github.com/igorlakic2/pizza.github.io" target="_blank"><div class="icon github"><i class="fas fa-code"></i></div></a>
-                            <a href="https://github.com/igorlakic2" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
+                            <a href="https://project-pizza.netlify.app/" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
                         </div>
                     </div>
                 </div>
@@ -102,7 +99,7 @@
                     <div class="projectInfo">
                         <div>
                             <a href="https://github.com/igorlakic2/PSDtoHTML.github.io" target="_blank"><div class="icon github"><i class="fas fa-code"></i></div></a>
-                            <a href="https://github.com/igorlakic2" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
+                            <a href="https://psd-to-html1.netlify.app/" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
                         </div>
                     </div>            
                 </div>
@@ -117,7 +114,7 @@
                     <div class="projectInfo">
                         <div>
                             <a href="https://github.com/igorlakic2/PSDtoHTML2.github.io" target="_blank"><div class="icon github"><i class="fas fa-code"></i></div></a>
-                            <a href="https://github.com/igorlakic2" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
+                            <a href="https://psd-to-html2.netlify.app/" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
                         </div>
                     </div>
                 </div>
@@ -132,7 +129,7 @@
                     <div class="projectInfo">
                         <div>
                             <a href="https://github.com/igorlakic2/PSDtoHTML3.github.io" target="_blank"><div class="icon github"><i class="fas fa-code"></i></div></a>
-                            <a href="https://github.com/igorlakic2" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
+                            <a href="https://psdtohtml3.netlify.app/" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
                         </div>
                     </div>
                 </div>
@@ -147,7 +144,7 @@
                     <div class="projectInfo">
                         <div>
                             <a href="https://github.com/igorlakic2/project" target="_blank"><div class="icon github"><i class="fas fa-code"></i></div></a>
-                            <a href="https://github.com/igorlakic2" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
+                            <a href="https://basicappsproject.netlify.app/" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +160,7 @@
                     <div class="projectInfo">
                         <div>
                             <a href="https://github.com/igorlakic2/react-recipe" target="_blank"><div class="icon github"><i class="fas fa-code"></i></div></a>
-                            <a href="https://github.com/igorlakic2" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
+                            <a href="https://igorlakic2.github.io/react-recipe/" target="_blank"><div class="icon display"><i class="fas fa-eye"></i></div></a>
                         </div>
                     </div>
                 </div>
@@ -197,7 +194,22 @@
         </div>
     </div>
 
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="navIcons">
+            <span><a href="https://github.com/igorlakic2"><i class="fab fa-github"></i></a></span>
+            <span><a href="https://www.linkedin.com/in/igorlakic2/"><i class="fab fa-linkedin"></i></a></span>
+        </div>
+        <h5>&copy; Copyright 2020, Igor Lakić. </h5>
+    </footer>
+
     <script src="script.js"></script>
-    
 </body>
 </html>
