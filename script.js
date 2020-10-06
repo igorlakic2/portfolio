@@ -21,14 +21,13 @@ const animations = () => {
 
 }
 
-const skillsAnimation = (skill) => {   
+const projectAnimation = () => {   
     document.querySelector(`.${skill}`).style.marginTop = 0;
     document.querySelector(`.${skill}`).style.opacity = 1;
 }
 
 window.addEventListener('load', () => {
     typing();
-    // setTimeout(animations, 2000);
     animations();
 
     if(window.innerWidth < 430){
@@ -54,12 +53,21 @@ window.addEventListener('resize', () => {
     }
 });
 
+let toTop = document.querySelector("#toTop");
+
+toTop.addEventListener('click', () => {
+    document.documentElement.scrollTop = 0;
+});
+
 window.addEventListener('scroll', () => {
     let skillsDivPosition = document.querySelector("#skills").offsetTop;
     let skillsDivHeight = document.querySelector("#skills").offsetHeight;
-    let scrollPx = window.pageYOffset + window.innerHeight;
+    let scrollPx = window.pageYOffset + window.innerHeight;  
 
-    if(scrollPx > skillsDivPosition + (skillsDivHeight / 2)){
+    let projectsDivPosition = document.querySelector("#projects").offsetTop;
+    let projectsDivHeight = document.querySelector("#projects").offsetHeight;
+
+    if(scrollPx > skillsDivPosition + skillsDivHeight / 2){
         document.querySelector(".skillsDiv").style.marginTop = 0;
         document.querySelector(".skillsDiv").style.opacity = 1;
 
@@ -67,6 +75,17 @@ window.addEventListener('scroll', () => {
             document.querySelector(".prev").style.display = "inline-block";
             document.querySelector(".next").style.display = "inline-block";
         }, 850);
+    }
+
+    if(scrollPx > projectsDivPosition + projectsDivHeight / 2){        
+        document.querySelector(".projectsDiv").style.marginTop = 0;
+        document.querySelector(".projectsDiv").style.opacity = 1;
+    }
+
+    if(window.pageYOffset > skillsDivPosition){
+        toTop.style.right = '15px';
+    }else{
+        toTop.style.right = '-50px';        
     }
 });
 
@@ -93,25 +112,18 @@ const skillsSlider = (skills) => {
 
     for(let i=0; i<skills.length; i++){       
         for(let j=1; j<=3; j++){
-            // skills[j].childNodes[1].style.fontSize = '130px';
             skills[j].childNodes[1].style.color = '#0b56a4';
             skills[j].style.opacity = 1;
             skills[i].children[1].style.opacity = 1;
         } 
 
         skills[0].childNodes[1].style.color = 'lightslategray';
-        // skills[0].childNodes[1].style.fontSize = '90px';
         skills[0].style.opacity = 0.5;
         skills[0].children[1].style.opacity = 0;
-        // skills[0].childNodes[1].classList.remove("proba");
-        // skills[0].childNodes[1].classList.add("probamali");
 
         skills[4].childNodes[1].style.color = 'lightslategray';
-        // skills[4].childNodes[1].style.fontSize = '90px';
         skills[4].style.opacity = 0.5;
         skills[4].children[1].style.opacity = 0;
-        // skills[4].childNodes[1].classList.remove("proba");
-        // skills[4].childNodes[1].classList.add("probamali");
 
 
         skills.forEach(skill => skillsDiv.appendChild(skill)); 
@@ -131,3 +143,5 @@ const plusSlides = (n) => {
 }
 
 skillsSlider(skills);
+
+

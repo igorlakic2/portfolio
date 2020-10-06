@@ -107,6 +107,11 @@ section{
     opacity: 0;
     transition: all 0.8s;
 }
+.projectsDiv{    
+    margin-top: 150px;
+    opacity: 0;
+    transition: all 0.8s;
+}
 .skillsDiv, .projectsDiv, .contactDiv{
     display: flex;
     flex-direction: row;
@@ -264,6 +269,26 @@ footer .navIcons a{
     color: white;
     font-size: 25px;
     padding: 15px;
+}
+#toTop{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    overflow: hidden;
+    right: -50px;
+    bottom: 35px;
+    transition: right 1s;
+    position: fixed;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    text-align: center;
+}
+#toTop i{
+    font-size: 40px;
+    border-radius: 30%;
+    padding: 5px;
+    color: #ffae00;
 }
 @media (max-width: 1260px){
     .container{
