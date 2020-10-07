@@ -144,4 +144,41 @@ const plusSlides = (n) => {
 
 skillsSlider(skills);
 
+let navLinks = document.querySelectorAll(".navLink");
 
+let hamburgerMenuBtn = document.querySelector("#hamburgerMenuBtn");
+let modal = document.querySelector("#navModal");
+
+hamburgerMenuBtn.addEventListener('click', () => {
+    hamburgerMenuBtn.classList.toggle("change");
+    // if(modal.style.display == "block"){
+    if(modal.style.opacity == 1){
+        // modal.style.display = "none";
+        modal.style.opacity = 0;
+        modal.style.left = '-1000px';
+    }else{
+        // modal.style.display = "block";
+        modal.style.opacity = 1;
+        modal.style.left = 0;
+    }
+});
+
+let navLinksMobile = document.querySelectorAll(".navLink");
+
+navLinksMobile.forEach(link => {
+    link.addEventListener('click', () => {
+        // modal.style.display = "none";
+        modal.style.opacity = 0;
+        modal.style.left = '-1000px';
+        hamburgerMenuBtn.classList.remove("change");
+    });
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+        // modal.style.display = "none";
+        modal.style.opacity = 0;
+        modal.style.left = '-1000px';
+        hamburgerMenuBtn.classList.toggle("change");
+    }
+});

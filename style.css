@@ -290,6 +290,50 @@ footer .navIcons a{
     padding: 5px;
     color: #ffae00;
 }
+#mobileNav {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: white;
+    z-index: 100;
+}
+#mobileNav #hamburgerMenuBtn{
+    margin: 10px;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 10px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.asd{
+    display: block;
+}
+.change .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}  
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -7px);
+}
+#mobileNav #hamburgerMenuBtn i {
+    padding: 12px 15px;
+    color: black;
+    font-size: 35px;
+}
+#mobileNav #hamburgerMenuBtn div {
+    width: 30px;
+    height: 5px;
+    display: block;
+    background-color: black;
+}
+
 @media (max-width: 1260px){
     .container{
         width: 90%;
@@ -430,6 +474,11 @@ footer .navIcons a{
     }
 }
 @media (max-width: 430px){
+    #mobileNav{
+        display: flex;
+        box-shadow: -2px 4px 45px -12px rgba(0,0,0,0.69);
+        position: fixed;
+    }
     .homeIcons button {
         padding: 8px 10px;
         font-size: 12px;
@@ -462,12 +511,10 @@ footer .navIcons a{
     }
     header {
         height: 420px;
+        margin-top: 60px;
     }
-    nav ul li {
-        padding: 15px 6px;
-    }
-    nav ul li a {
-        font-size: 14px;
+    .headerNav {
+        display: none;
     }
     .educationDiv, .skillsDiv, .projectsDiv, .contactDiv {
         padding: 30px 0;
@@ -512,5 +559,41 @@ footer .navIcons a{
     }
     .arrows{
         display: none;
+    }
+    #toTop{
+        display: none;
+    }
+    #navModal {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        opacity: 0;
+        left: -1000px;
+        /* display: none; */
+        transition: 0.7s all;
+    }
+    #navModal div {
+          width: 200px;
+          height: auto;
+          margin: auto;
+    }
+    #navModal div nav {
+          margin: 80px 0;
+    }
+    #navModal div nav ul {
+          padding: 0;
+          text-align: center;
+    }
+    #navModal div nav ul li {
+          display: block;
+          list-style-type: none;
+          padding: 10px 0;
+    }
+    #navModal div nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-size: 25px;
     }
 }
