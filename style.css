@@ -333,7 +333,9 @@ footer .navIcons a{
     display: block;
     background-color: black;
 }
-
+#navModal{
+	display: none;
+}
 @media (max-width: 1260px){
     .container{
         width: 90%;
@@ -571,7 +573,7 @@ footer .navIcons a{
         top: 0;
         opacity: 0;
         left: -1000px;
-        /* display: none; */
+        display: block;
         transition: 0.7s all;
     }
     #navModal div {
